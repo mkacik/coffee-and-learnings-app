@@ -1,0 +1,18 @@
+%h1 Coffee and Learnings voting page
+%h2 Explanation
+%p.explanation
+  Each week on Friday afternoon we pick the paper with most votes as the one we
+  are going to read the following week. At that stage the paper is taken down
+  from this list. It is perfectly fine to vote on more than one paper.
+%h2 Pending whitepapers
+%ul.papers
+  - @papers.each do |paper|
+    %li.paper{id: "paper-#{paper.id}"}
+      %div.paper-votes
+        %div.fb-like{'data' => {'share' => false, 'show-faces' => true, 'layout' => 'button_count', 'href' => "#{root_url}#paper-#{paper.id}"}}
+      %div.paper-details
+        %h3
+          %a{href: paper.url, title: paper.title}
+            %span.paper-id Paper &#35;#{paper.id}:
+            %span.paper-title #{paper.title}
+        %p.summary #{paper.summary}
