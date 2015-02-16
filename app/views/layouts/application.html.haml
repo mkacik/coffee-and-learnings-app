@@ -16,6 +16,18 @@
           xfbml      : true,
           version    : 'v2.2'
         });
+        FB.Event.subscribe('edge.create', function(url) {
+          var req_url = url + '/votes';
+          var request = new XMLHttpRequest();
+          request.open('POST', req_url, /* async */ false);
+          request.send();
+        });
+        FB.Event.subscribe('edge.remove', function(url) {
+          var req_url = url + '/votes/1';
+          var request = new XMLHttpRequest();
+          request.open('DELETE', req_url, /* async */ false);
+          request.send();
+        })
       };
       (function(d, s, id){
          var js, fjs = d.getElementsByTagName(s)[0];
