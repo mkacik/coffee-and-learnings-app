@@ -1,0 +1,10 @@
+- content_for :head do
+  %title Coffee and Learnings - vote for #{@paper.title}
+  %meta{property: 'og:title', content: "Coffee and Learnings - vote for #{@paper.title}"}/
+  %meta{property: 'og:url', content: paper_url(@paper)}/
+  %meta{property: 'og:description', content: "Vote for #{@paper.title} to be read during the next session"}/
+
+%h1 Coffee and Learnings - vote for #{@paper.title}
+%h2 #{@paper.title}
+%p.explanation #{@paper.summary}
+%div.fb-like{'data' => {'share' => "false", 'show-faces' => "true", 'layout' => 'button_count', 'href' => paper_url(@paper)}}

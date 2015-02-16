@@ -1,14 +1,11 @@
 !!!
 %html
   %head
-    %title Coffee and Learnings voting app
     %link{rel: 'stylesheet', href:'//fonts.googleapis.com/css?family=Arapey:400italic,400'}/
     %link{rel: 'stylesheet', href:'//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200'}/
-    %link{rel: 'stylesheet', href: 'style.css'}/
-    %meta{property: 'og:title', content: 'Coffee and Learnings voting app'}/
+    %link{rel: 'stylesheet', href: '/style.css'}/
     %meta{property: 'og:type', content: 'website'}/
-    %meta{property: 'og:url', content: root_url}/
-    %meta{property: 'og:description', content: 'FB Dublin Coffee and Learnings whitepaper selection app'}/
+    = yield :head
   %body
     :javascript
       window.fbAsyncInit = function() {

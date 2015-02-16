@@ -1,3 +1,9 @@
+- content_for :head do
+  %title Coffee and Learnings voting app
+  %meta{property: 'og:title', content: 'Coffee and Learnings voting app'}/
+  %meta{property: 'og:url', content: root_url}/
+  %meta{property: 'og:description', content: 'FB Dublin Coffee and Learnings whitepaper selection app'}/
+
 %h1 Coffee and Learnings voting page
 %h2 Explanation
 %p.explanation
@@ -9,7 +15,7 @@
   - @papers.each do |paper|
     %li.paper{id: "paper-#{paper.id}"}
       %div.paper-votes
-        %div.fb-like{'data' => {'share' => false, 'show-faces' => true, 'layout' => 'button_count', 'href' => "#{root_url}#paper-#{paper.id}"}}
+        %div.fb-like{'data' => {'share' => "false", 'show-faces' => "true", 'layout' => 'button_count', 'href' => paper_url(paper)}}
       %div.paper-details
         %h3
           %a{href: paper.url, title: paper.title}
