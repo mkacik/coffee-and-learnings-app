@@ -1,12 +1,11 @@
 body {
-  font-family: 'Arapey', serif;
+  font-family: sans-serif;
   width: 800px;
   margin: 20px auto 40px;
   color: #666;
 }
 
 h1, h2, h3 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 200;
 }
 
@@ -48,5 +47,4 @@ li.paper:last-child {
 
 p.summary {
   font-size: 90%;
-  font-style: italic;
 }

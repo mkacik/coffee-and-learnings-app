@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Paper.create(title: 'Sample title',
+             url: 'http://localhost/sample_url',
+             summary: 'Sample summary')
+Paper.create(title: 'Another sample title',
+             url: 'http://localhost/sample_url',
+             summary: 'Another ample summary')
